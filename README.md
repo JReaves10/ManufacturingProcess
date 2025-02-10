@@ -28,39 +28,39 @@ cd ManufacturingProcess
 ### 1. Calculating Control Limits
 The control limits are defined as: **Upper Control Limit (UCL)** & **Lower Control Limit (LCL)**:
 
-1
+![](first.png)
 
 ### 2. Window Functions for Calculations
 - The query uses window functions to calculate moving averages and standard deviations:
 - This block creates a window of length 5 for each operator, calculating metrics for rows up to the current row while excluding incomplete windows.
 
-2
+![](second.png)
 
 ### 3. Filtering and Control Limit Calculation
 This ensures only complete windows are included in the final query output.
 
-3
+![](third.png)
 
 ### 4. Generating Alerts
 The alert flag is set to TRUE if a product height falls outside the control limits:
 
-4
+![](fourth.png)
 
 ### 5. Final Query Output
 The final query returns the following fields:
--**operator** - The operating machine.
--**row_number** - Sequential row number.
--**height** - Height of the manufactured item.
--**avg_height** - Moving average of height.
--**stddev_height** - Moving standard deviation of height.
--**ucl** - Upper Control Limit.
--**lcl** - Lower Control Limit.
--**alert** - Boolean flag indicating whether the height is within control limits.
+- **operator** - The operating machine.
+- **row_number** - Sequential row number.
+- **height** - Height of the manufactured item.
+- **avg_height** - Moving average of height.
+- **stddev_height** - Moving standard deviation of height.
+- **ucl** - Upper Control Limit.
+- **lcl** - Lower Control Limit.
+- **alert** - Boolean flag indicating whether the height is within control limits.
 
 ### Results
 The query generates a DataFrame alerts, containing key process metrics and an alert flag.
 
-5
+![](fifth.png)
 
 ## Conclusion
 This project implements Statistical Process Control (SPC) to enhance monitoring and control of the manufacturing process. By generating alerts for out-of-control product measurements, it supports improved process consistency and product quality.
