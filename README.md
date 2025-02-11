@@ -21,7 +21,7 @@ Clone this repository and install the necessary libraries:
 git clone https://github.com/JReaves10/ManufacturingProcess
 cd ManufacturingProcess
 ```
-- set up your SQL environment and ensure access to the manufacturing_parts table.
+- Set up your SQL environment and ensure access to the manufacturing_parts table.
 - Execute the provided SQL query to generate the alerts DataFrame.
 
 ## Code Explanation
